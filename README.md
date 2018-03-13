@@ -1,2 +1,2 @@
-# genghaot.github.io
-Geng Hao T. Portfolio
+# rerandomblends.github.io
+Website of Random Blends 2018
