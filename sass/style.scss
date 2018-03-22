@@ -152,17 +152,147 @@ body {
 		font-size: 1.2em;
 		font-weight: 400;
 		line-height: 1.8;
-		margin-top: 16px;
+		margin: 16px auto;
 		max-width: 640px;
 	}
 }
 
-.schedule {
-	background-color: #e7f2f1;
+.highlights {
+	background-color: #d3efea;
+	//background-image: url('../img/rb2018-about-bg.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat;
 	text-align: center;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	position: relative;
+
+	h1 {
+		background-image: url('../img/h1-bg-3.png');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		font-size: 1.8em;
+		font-weight: 500;
+		color: #fff;
+		line-height: 1.4;
+		margin: 0 auto;
+		padding: 1em 0;
+
+		@include media-breakpoint-up(xs) {
+			width: 300px;
+		}
+		
+		@include media-breakpoint-up(sm) {
+			min-width: 360px;
+		}
+	}
+
+	.description {
+		font-size: 1.2em;
+		font-weight: 400;
+		line-height: 1.8;
+		margin: 8px 16px;
+		max-width: 640px;
+	}
+
+	h2 {
+		font-size: 1.6em;
+		color: #149380;
+		margin: 16px auto;
+	}
+
+	.preview {
+		background-color: #fff;
+		border-radius: 8px;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 8px auto;
+
+		@include media-breakpoint-up(xs) {
+			width: 140px;
+			height: 140px;
+			max-width: 140px;
+			max-height: 140px;
+		}
+
+		@include media-breakpoint-up(md) {
+			width: 100px;
+			height: 100px;
+			max-width: 100px;
+			max-height: 100px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			width: 140px;
+			height: 140px;
+			max-width: 140px;
+			max-height: 140px;
+		}
+
+			.caption {
+				background-color: rgba(12, 76, 65, .75);
+				font-size: 1em;
+				font-weight: 500;
+				color: #fff;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				opacity: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.logo {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				-webkit-transition: all .2s;
+				-moz-transition: all .2s;
+				transition: all .2s;
+			}
+
+			&:hover {
+				.labels {
+					display: block;
+					animation: fadeInUp .2s;
+				}
+
+				.caption {
+					opacity: 1;
+					animation: fadeIn .2s;
+				}
+
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
+}
+
+.schedule {
+	background-color: #edf9f7;
+	text-align: center;
+	padding-top: 124px;
+	padding-bottom: 168px;
+	position: relative;
+
+	@include media-breakpoint-up(sm) {
+		padding-top: 60px;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: 60px;
+	}
 
 	.description {
 		font-size: 1.2em;
@@ -189,7 +319,7 @@ body {
 		}
 		
 		@include media-breakpoint-up(sm) {
-			min-width: 400px;
+			min-width: 360px;
 		}
 	}
 
@@ -199,7 +329,7 @@ body {
 		padding-top: 16px;
 	}
 
-	.schedule {
+	ul.schedule {
 		font-size: 1em;
 		margin: 0;
 		padding: 0;
@@ -233,8 +363,8 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 30vh;
-		width: 30vh;
+		height: 28vh;
+		width: 28vh;
 		z-index: 1;
 
 		@include media-breakpoint-up(lg) {
@@ -249,8 +379,8 @@ body {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		height: 32vh;
-		width: 40vh;
+		height: 28vh;
+		width: 36vh;
 		z-index: 1;
 
 		@include media-breakpoint-up(lg) {

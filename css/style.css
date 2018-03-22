@@ -5667,15 +5667,112 @@ body {
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.8;
-    margin-top: 16px;
+    margin: 16px auto;
     max-width: 640px; }
 
-.schedule {
-  background-color: #e7f2f1;
+.highlights {
+  background-color: #d3efea;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative; }
+  .highlights h1 {
+    background-image: url("../img/h1-bg-3.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 300px; }
+    @media (min-width: 576px) {
+      .highlights h1 {
+        min-width: 360px; } }
+  .highlights .description {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 8px 16px;
+    max-width: 640px; }
+  .highlights h2 {
+    font-size: 1.6em;
+    color: #149380;
+    margin: 16px auto; }
+  .highlights .preview {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+    width: 140px;
+    height: 140px;
+    max-width: 140px;
+    max-height: 140px; }
+    @media (min-width: 768px) {
+      .highlights .preview {
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px; } }
+    @media (min-width: 992px) {
+      .highlights .preview {
+        width: 140px;
+        height: 140px;
+        max-width: 140px;
+        max-height: 140px; } }
+    .highlights .preview .caption {
+      background-color: rgba(12, 76, 65, 0.75);
+      font-size: 1em;
+      font-weight: 500;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .highlights .preview .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      transition: all .2s; }
+    .highlights .preview:hover .labels {
+      display: block;
+      animation: fadeInUp .2s; }
+    .highlights .preview:hover .caption {
+      opacity: 1;
+      animation: fadeIn .2s; }
+    .highlights .preview:hover img {
+      transform: scale(1.2); }
+
+.schedule {
+  background-color: #edf9f7;
+  text-align: center;
+  padding-top: 124px;
+  padding-bottom: 168px;
+  position: relative; }
+  @media (min-width: 576px) {
+    .schedule {
+      padding-top: 60px; } }
+  @media (min-width: 768px) {
+    .schedule {
+      padding-bottom: 60px; } }
   .schedule .description {
     font-size: 1.2em;
     font-weight: 400;
@@ -5696,28 +5793,28 @@ body {
     width: 300px; }
     @media (min-width: 576px) {
       .schedule h1 {
-        min-width: 400px; } }
+        min-width: 360px; } }
   .schedule h2 {
     font-size: 1.6em;
     color: #ff907f;
     padding-top: 16px; }
-  .schedule .schedule {
+  .schedule ul.schedule {
     font-size: 1em;
     margin: 0;
     padding: 0;
     width: 100%; }
-    .schedule .schedule .event {
+    .schedule ul.schedule .event {
       font-weight: 500;
       list-style: none;
       width: 100%; }
-      .schedule .schedule .event .time {
+      .schedule ul.schedule .event .time {
         font-weight: 400;
         color: #ff907f;
         margin-right: 16px;
         float: left;
         text-align: right;
         width: 25%; }
-      .schedule .schedule .event .activity {
+      .schedule ul.schedule .event .activity {
         text-align: left;
         float: left;
         width: 65%; }
@@ -5727,8 +5824,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 30vh;
-    width: 30vh;
+    height: 28vh;
+    width: 28vh;
     z-index: 1; }
     @media (min-width: 992px) {
       .schedule .chameleon {
@@ -5740,8 +5837,8 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 32vh;
-    width: 40vh;
+    height: 28vh;
+    width: 36vh;
     z-index: 1; }
     @media (min-width: 992px) {
       .schedule .sun-bear {
