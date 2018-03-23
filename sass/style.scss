@@ -10,6 +10,12 @@
 	transition: $args;	
 }
 
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
 body {
 	background-color: #fff;
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
@@ -24,53 +30,139 @@ body {
 	left: 0;
 
 	.navbar {
-		background: transparent;
+		background-color: transparent;
 		@include transition(all ease-in-out .1s);
 
-		a {
-			text-decoration: none;
+		@include media-breakpoint-up(sm) {
+			background-color: rgba(255, 255, 255, .64);
 		}
 
-		#navbarNav {
-			margin: 4px 0;
+		a.nav-link {
+			font-size: 1.2em;
+			font-weight: 500;
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			text-align: center;
+			width: 100%;
+
+			&:hover {
+				@include opacity(.64);
+			}
+
+			@include media-breakpoint-up(sm) {
+				background-color: transparent;
+				display: inline-block;
+				color: #ff907f;
+			}
 		}
 
 		.navbar-nav {
-			margin: 0 auto;
+			background-color: #ff907f;
+			border-radius: 4px;
+
+			@include media-breakpoint-up(sm) {
+				background-color: transparent;
+				border-radius: none;
+				margin: 0 auto;
+			}
+		}
+
+		.button {
+			background-color: #ff907f;
+			border-radius: 56px;
+			width: 56px;
+			height: 56px;
+			margin-bottom: 16px;
+
+			@include media-breakpoint-up(sm) {
+				display: none;
+			}
+		}
+
+		.navbar-toggler {
+			margin: 15px 13px;
+			width: 30px;
+			height: 24px;
+			position: relative;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			@include transition(all .5s ease-in-out);
+			cursor: pointer;
+
+			span {
+				background-color: #fff;
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				border-radius: 4px;
+				opacity: 1;
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+				@include transition(all .25s ease-in-out);
+
+				&:nth-child(1) {
+					top: 0;
+				}
+
+				&:nth-child(2), &:nth-child(3) {
+					top: 10px;
+				}
+
+				&:nth-child(4) {
+					top: 20px;
+				}
+			}
+		}
+
+		.navbar-toggler.show {
+			span:nth-child(1) {
+				top: 18px;
+				width: 0%;
+				left: 50%;
+			}
+
+			span:nth-child(2) {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+
+			span:nth-child(3) {
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+
+			span:nth-child(4) {
+				top: 18px;
+				width: 0%;
+				left: 50%;
+			}
 		}
 	}
 
 	.navbar.scrolled {
-		background: rgba(255, 255, 255, .95);
-		box-shadow: 0 0 4px rgba(0, 0, 0, .25);
-	}
+		@include media-breakpoint-up(sm) {
+			background-color: #ff907f;
+		}
+		//box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+		
+		a.nav-link {
+			color: #fff;
 
-	.navbar-toggle {
-		position: fixed;
-		background: #333;
-		border: none;
-		border-radius: 40px;
-		width: 40px;
-		height: 40px;
-		margin: 15px;
-		text-align: center;
-		z-index: 1;
-	}
-
-	.navbar-toggle:hover {
-		background: #111;
-	}
-
-	.navbar-toggle:focus {
-		background: #333;
-	}
-
-	.navbar-toggle .icon-bar {
-		background: #f0f0f0;
-		border-radius: 0;
-		margin-right: auto;
-		margin-left: auto;
-		width: 20px;
+			&:hover {
+				@include opacity(.64);
+			}
+		}
 	}
 }
 
@@ -89,7 +181,7 @@ body {
 		font-size: 1.4em;
 		font-weight: 200;
 		line-height: 1.5;
-		max-width: 440px;
+		max-width: 420px;
 
 		h1 {
 			font-size: 1em;
@@ -159,10 +251,6 @@ body {
 
 .highlights {
 	background-color: #d3efea;
-	//background-image: url('../img/rb2018-about-bg.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: repeat;
 	text-align: center;
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -279,7 +367,7 @@ body {
 		}
 }
 
-.schedule {
+.itinerary {
 	background-color: #edf9f7;
 	text-align: center;
 	padding-top: 124px;
