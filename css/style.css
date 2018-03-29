@@ -5692,7 +5692,7 @@ body {
     max-width: 420px; }
     .intro .description h1 {
       font-size: 1em;
-      font-weight: 500;
+      font-weight: 600;
       color: #b40883; }
     .intro .description .logo {
       width: 100%; }
@@ -5726,7 +5726,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     font-size: 1.8em;
-    font-weight: 500;
+    font-weight: 600;
     color: #685109;
     line-height: 1.4;
     margin: 0 auto;
@@ -5754,7 +5754,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     font-size: 1.8em;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
     line-height: 1.4;
     margin: 0 auto;
@@ -5888,7 +5888,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     font-size: 1.8em;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
     line-height: 1.4;
     margin: 0 auto;
@@ -5909,18 +5909,21 @@ body {
     .itinerary ul.schedule .event {
       font-weight: 500;
       list-style: none;
-      width: 100%; }
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: inline-block; }
       .itinerary ul.schedule .event .time {
         font-weight: 00;
         color: #ff907f;
         margin-right: 16px;
         float: left;
         text-align: right;
-        width: 25%; }
+        width: 30%; }
       .itinerary ul.schedule .event .activity {
         text-align: left;
         float: left;
-        width: 65%; }
+        width: 60%; }
   .itinerary .chameleon {
     background-image: url("../img/rb2018-bg-chameleon.png");
     background-size: cover;

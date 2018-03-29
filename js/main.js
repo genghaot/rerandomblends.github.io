@@ -43,5 +43,6 @@ $(document).ready(function(){
 
     $('.nav-link').click(function(){
         $('.navbar-toggler').removeClass('show');
+        $('.navbar-collapse').removeClass('show');
     });
 });

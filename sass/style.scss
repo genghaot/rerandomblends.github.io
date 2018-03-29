@@ -474,7 +474,10 @@ body {
 		.event {
 			font-weight: 500;
 			list-style: none;
+			margin: 0;
+			padding: 0;
 			width: 100%;
+			display: inline-block;
 
 			.time {
 				font-weight: 00;
@@ -482,13 +485,13 @@ body {
 				margin-right: 16px;
 				float: left;
 				text-align: right;
-				width: 25%;
+				width: 30%;
 			}
 
 			.activity {
 				text-align: left;
 				float: left;
-				width: 65%;
+				width: 60%;
 			}
 		}
 	}
