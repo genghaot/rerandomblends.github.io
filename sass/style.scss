@@ -45,6 +45,7 @@ body {
 			display: block;
 			text-align: center;
 			width: 100%;
+			cursor: pointer;
 
 			&:hover {
 				@include opacity(.64);

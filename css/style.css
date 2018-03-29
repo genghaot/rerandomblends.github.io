@@ -5583,7 +5583,8 @@ body {
       color: #fff;
       display: block;
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      cursor: pointer; }
       .head .navbar a.nav-link:hover {
         opacity: 0.64;
         filter: alpha(opacity=64); }
