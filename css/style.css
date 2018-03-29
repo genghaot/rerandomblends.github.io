@@ -5557,8 +5557,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 body {
   background-color: #fff;
-  font-family: 'Rubik', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 0.875rem;
   color: #666; }
 
@@ -5786,18 +5786,24 @@ body {
     height: 140px;
     max-width: 140px;
     max-height: 140px; }
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       .highlights .preview {
-        width: 100px;
-        height: 100px;
-        max-width: 100px;
-        max-height: 100px; } }
-    @media (min-width: 992px) {
+        width: 120px;
+        height: 120px;
+        max-width: 120px;
+        max-height: 120px; } }
+    @media (min-width: 768px) {
       .highlights .preview {
         width: 140px;
         height: 140px;
         max-width: 140px;
         max-height: 140px; } }
+    @media (min-width: 992px) {
+      .highlights .preview {
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px; } }
     .highlights .preview .caption {
       background-color: rgba(12, 76, 65, 0.75);
       font-size: 1em;
@@ -5829,6 +5835,34 @@ body {
       animation: fadeIn .2s; }
     .highlights .preview:hover img {
       transform: scale(1.2); }
+  .highlights .workshop {
+    margin-bottom: 16px; }
+    .highlights .workshop .icon {
+      background-color: #fff;
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto; }
+      .highlights .workshop .icon img {
+        width: 80px; }
+    .highlights .workshop .description {
+      margin: 0; }
+      @media (min-width: 576px) {
+        .highlights .workshop .description {
+          text-align: left; } }
+      @media (min-width: 768px) {
+        .highlights .workshop .description {
+          text-align: center; } }
+      @media (min-width: 992px) {
+        .highlights .workshop .description {
+          text-align: left; } }
+    .highlights .workshop h3 {
+      font-size: 1.2em;
+      color: #2e8464; }
 
 .itinerary {
   background-color: #edf9f7;
@@ -5877,7 +5911,7 @@ body {
       list-style: none;
       width: 100%; }
       .itinerary ul.schedule .event .time {
-        font-weight: 400;
+        font-weight: 00;
         color: #ff907f;
         margin-right: 16px;
         float: left;
