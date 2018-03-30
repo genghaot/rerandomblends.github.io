@@ -181,8 +181,9 @@ body {
 	.description {
 		font-size: 1.4em;
 		font-weight: 200;
-		line-height: 1.5;
-		max-width: 420px;
+		line-height: 1.8;
+		width: 28vw;
+		min-width: 320px;
 
 		h1 {
 			font-size: 1em;
@@ -215,9 +216,6 @@ body {
 	text-align: center;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: relative;
 
 	h1 {
@@ -246,7 +244,37 @@ body {
 		font-weight: 400;
 		line-height: 1.8;
 		margin: 16px auto;
-		max-width: 640px;
+		max-width: 800px;
+	}
+
+	.icon {
+		height: 100px;
+		margin: 16px auto;
+
+		img {
+			height: 100px;
+		}
+	}
+
+	h2 {
+		font-size: 1.4em;
+		color: #000;
+	}
+
+	.brochure-link {
+		background-color: #ecde9c;
+		color: #685109;
+		font-size: 1.2em;
+		font-weight: 600;
+		border-radius: 8px;
+		display: inline-block;
+		margin-top: 8px;
+		padding: 8px 16px;
+		text-decoration: none;
+
+		&:hover {
+			@include opacity(.64);
+		}
 	}
 }
 
@@ -283,7 +311,6 @@ body {
 		font-weight: 400;
 		line-height: 1.8;
 		margin: 8px 16px;
-		max-width: 640px;
 	}
 
 	h2 {
@@ -328,6 +355,13 @@ body {
 			height: 100px;
 			max-width: 100px;
 			max-height: 100px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			width: 200px;
+			height: 200px;
+			max-width: 200px;
+			max-height: 200px;
 		}
 
 			.caption {
@@ -376,6 +410,9 @@ body {
 
 	.workshop {
 		margin-bottom: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		.icon {
 			background-color: #fff;
@@ -390,6 +427,16 @@ body {
 
 			img {
 				width: 80px;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				height: 160px;
+				width: 160px;
+				border-radius: 160px;
+
+				img {
+					width: 120px;
+				}
 			}
 		}
 
@@ -436,7 +483,7 @@ body {
 		font-weight: 400;
 		line-height: 1.8;
 		margin: 16px auto;
-		max-width: 640px;
+		max-width: 800px;
 	}
 
 	h1 {
@@ -511,6 +558,11 @@ body {
 			height: 36vh;
 			width: 36vh;
 		}
+
+		@include media-breakpoint-up(xxl) {
+			height: 24vh;
+			width: 24vh;
+		}
 	}
 
 	.sun-bear {
@@ -527,6 +579,11 @@ body {
 			height: 36vh;
 			width: 44vh;
 		}
+
+		@include media-breakpoint-up(xxl) {
+			height: 24vh;
+			width: 32vh;
+		}
 	}
 
 	.asset-1 {
@@ -541,6 +598,11 @@ body {
 			width: 20vh;
 			z-index: 0;
 		}
+
+		@include media-breakpoint-up(xxl) {
+			height: 29.5vh;
+			width: 15vh;
+		}
 	}
 
 	.asset-2 {
@@ -553,6 +615,11 @@ body {
 			height: 36vh;
 			width: 20vh;
 			z-index: 0;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			height: 24vh;
+			width: 14vh;
 		}
 	}
 }
