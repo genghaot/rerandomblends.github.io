@@ -37,6 +37,12 @@ $(document).ready(function(){
         }, 200);
     });
 
+    $(".instagramnav").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#instagram").offset().top
+        }, 200);
+    });
+
     $('.navbar-toggler').click(function(){
         $(this).toggleClass('show');
     });
@@ -45,4 +51,15 @@ $(document).ready(function(){
         $('.navbar-toggler').removeClass('show');
         $('.navbar-collapse').removeClass('show');
     });
+
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '7230957905',
+        limit: 12,
+        resolution: 'standard_resolution',
+        accessToken: '7230957905.1677ed0.785b16903cdd41d0a1d9e5897119134b',
+        sortBy: 'most-recent',
+        template: '<a href="{{link}}" target="_blank"><img src="{{image}}"></a>'
+    });
+    feed.run();
 });
