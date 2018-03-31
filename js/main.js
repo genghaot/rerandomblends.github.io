@@ -52,6 +52,8 @@ $(document).ready(function(){
         $('.navbar-collapse').removeClass('show');
     });
 
+    document.getElementById("defaultOpen").click();
+
     var feed = new Instafeed({
         get: 'user',
         userId: '7230957905',
